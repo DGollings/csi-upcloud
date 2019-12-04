@@ -1,5 +1,9 @@
 Heavily inspired by Digital Ocean and Ceph CSI drivers
 
+This driver allows for persistent volumes on a Kubernetes cluster using transparantly mapped and attached MaxIOPS Upcloud volumes. Basically, wherever your pod(s) go, your associated volumes go. High available, high performance persistent applications or distributed  cloud native databases like Cockroachdb.  
+
+Current minimum size at Upcloud is 10GB  
+
 Alpha status software, works for me but not thoroughly tested yet.
 
 Basic usage:  
@@ -14,7 +18,7 @@ Next, apply the CSI driver and all its components:
 Optional, check if everything is running:  
 `kubectl get pods -A`
 
-Finally, create a persistent volume claim and a pod that uses that claim:
+Finally, create a persistent volume claim and a pod that uses that claim:  
 `kubectl apply -f deploy/kubernetes/tests/pvctest.yaml`  
 `kubectl apply -f deploy/kubernetes/tests/claimtest.yaml`  
 
