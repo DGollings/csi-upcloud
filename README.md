@@ -2,10 +2,8 @@ Heavily inspired by Digital Ocean and Ceph CSI drivers
 
 Alpha status software, works for me but not thoroughly tested yet.
 
-Basic usage:
-Have a running Kubernetes cluster  
-
-then:  
+Basic usage:  
+Have a running Kubernetes cluster then:  
 Open the following file:  
 `deploy/kubernetes/secret/upcloud_secret.yaml`  
 enter your Upcloud username/password and apply:  
